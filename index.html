@@ -2,6 +2,28 @@
 <html>
 <head>
   <title>❤️</title>
+  <style>
+      div {
+          text-align: center;
+          font-size: 3rem;
+          background: url('https://trippy.me/wp-content/uploads/Trippy-Hallucination-BW.gif') fixed no-repeat;
+          background-size: 100% 100%;
+          animation: color 1s infinite;
+          font-weight: 900;     
+      }
+            
+      @keyframes color {
+          0% {
+              color: white;
+          }
+          50% {
+              color: black;
+          }
+          100% {
+              color: white;
+          }
+      }
+  </style>
 </head>
 <body>
   <div id="output-container"></div>
@@ -10,14 +32,14 @@ function activeWhileLoop() {
     let outputContainer = document.getElementById("output-container");
     let i = 1;
     
-    
+        
     outputContainer.innerHTML = "";
 
     while (i <= 5000) {
         
         let paragraph = document.createElement("p");
   
-        paragraph.textContent = 'iloveyou';     
+        paragraph.textContent = 'I LOVE YOU';     
         outputContainer.appendChild(paragraph);       
         i++;
         sleep(1000);
