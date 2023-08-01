@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+	user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("loptopbg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	background: linear-gradient(178deg, #3FEEE6, #FC4445);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 100px;
+	box-shadow: 0 0 50px #FC4445,
+	0 0 60px #FC4445;
+  }
+
+label.logo {
+	color: #C4FCFF;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0;
+	font-weight: bold;
+	font-family: 'Alfa Slab One', cursive;
+}
+.logo span {
+	color: #3FEEE6;
+}
+
+label a {
+	color: #CDFFFC;
+	padding: 7px 13px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: default;
+}
+
+.logo img {
+	position: relative;
+	top: 10px;
+	margin-left: -50px;
+	width: 50px;
+	-webkit-user-drag: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+	font-family: 'Open Sans', sans-serif;
+    display: flex;
+}
+
+.nav-bar ul li a {
+	font-weight: 800;
+	position: relative;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    margin: 0 5px;  
+}
+
+.nav-bar ul li a::after {
+	content: "";
+	border-radius: 500px;
+	position: absolute;
+	background-color: #3FEEE6;
+	height: 2px;
+	width: 0;
+	left: 0;
+	bottom: -12px;
+	transition: 0.3s ease;
+	box-shadow: 0 0 5px #3FEEE6,
+	0 0 5px #3FEEE6,
+	inset 0 0 5px #3FEEE6,
+	inset 0 0 5px #3FEEE6;
+}
+
+.nav-bar ul:hover li a {
+	color: #b23c3c;
+}
+
+.nav-bar ul li a:hover {
+	text-shadow: 0 0 3px #3FEEE6;
+	color: #3FEEE6;
+}
+
+.nav-bar ul li a:hover::after {
+	width: 100%;
+}
+
+.nav-bar ul li a.active {
+	text-shadow: 0 0 3px #3FEEE6;
+	color: #3FEEE6;
+}
+
+.nav-bar ul li a.active::after {
+	content: "";
+    width: 100%;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("loptopbg2.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+	.logo img {
+		position: relative;
+		top: 5px;
+		margin-left: -10px;
+		margin-right: -10px;
+		width: 40px;
+	}
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+		border-radius: 100px;
+    }
+    .nav-bar {
+        z-index: 100;
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: rgba(88, 199, 255, 0.2);
+        transition: 0.5s;
+        overflow: hidden;
+		backdrop-filter: blur(2px);
+    }
+
+    .nav-bar.active {
+        height: 450px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        transition: 0.5;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a::after {
+        margin-bottom: 12px;
+    }
+	.nav-bar ul li {
+		margin-top: 40px;
+	}
+}
+
+/*HOME PAGE*/
+.transition {
+	animation: transitionIn 4s;
+}
+
+@keyframes transitionIn {
+	from {
+		opacity: 0;
+		transform: rotationX(10px);
+	}
+	to {
+		opacity: 1;
+		transform: rotationX(0);
+	}
+}
+
+.hi {
+	color: #B9E9FC;
+	font-size: 40px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	font-family: 'Abril Fatface', cursive;
+}
+
+.container {
+	font-family: 'Alfa Slab One', cursive;
+	width: 100%;
+	height: 100vh;
+	color: #B9E9FC;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container h1 {
+	font-size: 80px;
+	font-weight: 600px;
+	font-family: 'Abril Fatface', cursive;
+}
+
+span.auto-type {
+	font-family: 'Montserrat', sans-serif;
+	background: linear-gradient(to bottom left, #3FEEE6, #FC4445);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 858px) {
+	.hi {
+		color: #B9E9FC;
+		font-size: 18px;
+		text-align: center;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		font-family: 'Abril Fatface', cursive;
+	}
+
+	.container {
+		font-family: 'Alfa Slab One', cursive;
+		width: 100%;
+		height: 100vh;
+		color: #B9E9FC;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container h1 {
+		font-size: 35px;
+		font-weight: 600px;
+		font-family: 'Abril Fatface', cursive;
+	}
+
+	span.auto-type {
+		font-family: 'Prata', serif;
+		background: linear-gradient(to bottom left, #3FEEE6, #E528FF);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+#sect2 {
+	width: 100%;
+	height: 100vh;
+
+}
